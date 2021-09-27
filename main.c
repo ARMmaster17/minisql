@@ -15,12 +15,6 @@ typedef SSIZE_T ssize_t;
 #define TABLE_MAX_PAGES 100
 
 typedef struct {
-    Table* table;
-    uint32_t row_num;
-    bool end_of_table;
-} Cursor;
-
-typedef struct {
     char* buffer;
     size_t buffer_length;
     ssize_t input_length;
@@ -72,6 +66,12 @@ typedef struct {
     uint32_t num_rows;
     Pager* pager;
 } Table;
+
+typedef struct {
+    Table* table;
+    uint32_t row_num;
+    bool end_of_table;
+} Cursor;
 
 #define size_of_attribute(Struct, Attribute) sizeof(((Struct*)0)->Attribute)
 
