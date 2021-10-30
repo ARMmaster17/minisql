@@ -52,3 +52,7 @@ Mkfile.old
 dkms.conf
 
 .idea/**
+cmake-build-debug/**
+vendor/**
+main
+.bundle/**
